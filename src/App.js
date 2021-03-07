@@ -6,7 +6,6 @@ import { useState } from 'react';
 import { FcPlus, FcCheckmark } from 'react-icons/fc';
 import { MdDragHandle } from 'react-icons/md';
 import { v4 as uuid_v4 } from 'uuid';
-import Helmet from 'react-helmet';
 
 const MainPageStyles = styled.div`
   display: flex;
@@ -125,8 +124,6 @@ const MainPageStyles = styled.div`
     }
   }
 `;
-
-const image_url = './tododo.jpg';
 
 function App() {
   const [newItem, setNewItem] = useState({
