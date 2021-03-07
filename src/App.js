@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { FcPlus, FcCheckmark } from 'react-icons/fc';
 import { MdDragHandle } from 'react-icons/md';
 import { v4 as uuid_v4 } from 'uuid';
+import Helmet from 'react-helmet';
 
 const MainPageStyles = styled.div`
   display: flex;
@@ -125,6 +126,8 @@ const MainPageStyles = styled.div`
   }
 `;
 
+const image_url = './tododo.jpg';
+
 function App() {
   const [newItem, setNewItem] = useState({
     title: '',
@@ -171,6 +174,28 @@ function App() {
 
   return (
     <MainPageStyles>
+      <Helmet>
+        <title>To💩</title>
+        <meta name="description" content="Tododo is a todo app of course" />
+        <meta property="og:title" content="To💩" />
+        <meta
+          property="og:description"
+          content="Tododo is a todo app of course"
+        />
+        <meta property="og:image" itemProp="image" content={image_url} />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://tododo-mattcoffyn.vercel.app"
+        />
+        <meta property="twitter:title" content="To💩 - a todo app" />
+        <meta
+          property="twitter:description"
+          content="Tododo is a todo app of course"
+        />
+        <meta property="twitter:image" itemProp="image" content={image_url} />
+        <meta property="twitter:card" content="summary_large_image" />
+      </Helmet>
       <h1> To💩</h1>
       <h3>
         Drag & Drop to reorder! Add and remove items! Persistent state on
