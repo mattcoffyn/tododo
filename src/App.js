@@ -13,7 +13,7 @@ const MainPageStyles = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10rem;
+  padding: 3rem;
 
   h1 {
     font-size: 6rem;
